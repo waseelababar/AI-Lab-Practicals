@@ -81,9 +81,9 @@ BFS also uses the neighbor order when exploring positions. Its selected path can
 # Experiment 2: Change Start and Goal
 **1. Objective
 The objective of this experiment is to test BFS and DFS using different starting and goal positions in the same maze and compare their path lengths and maximum frontier sizes.**
+### 💻 Code Cell
 
-
----python
+ ```python
 
 directions = [
     (-1, 0),   # up

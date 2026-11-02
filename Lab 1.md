@@ -19,7 +19,7 @@ UNIVERSITY_KB["rules"].append({
 
 print("New Degree Honors Rule Added Successfully!")
 
-# Adding above lines to KB achieves the 1st exercise.
+Adding above lines to KB achieves the 1st exercise.
 
 ______________________________________________________________________________________________________________________
 

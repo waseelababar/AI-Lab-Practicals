@@ -1,3 +1,13 @@
+
+**Name:** Waseela Babar <br>
+**Roll Number:** 08 <br>
+**Batch:** 2024-2028 <br>
+**Department:** Computer Science <br>
+**Assignment:** AI <br>
+**Submitted to:** Sir Imran <br>
+**Date:** 2-Nov-2026
+
+
 # Lab 2
 
 **Topic:** Uninformed Search Algorithms

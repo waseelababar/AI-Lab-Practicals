@@ -127,7 +127,7 @@ start = (0, 0)
 goal = (4, 4)
 ---
 ```
-**Program Output**
+Program Output
 
 Trial : 1
 Start: (0, 0)

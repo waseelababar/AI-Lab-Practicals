@@ -1,4 +1,13 @@
 
+**Name:** Waseela Babar <br>
+**Roll Number:** 08 <br>
+**Batch:** 2024-2028 <br>
+**Department:** Computer Science <br>
+**Assignment:** AI <br>
+**Submitted to:** Sir Imran <br>
+**Date:** 2-Nov-2026
+
+
 # Lab 3: A* Search for the 8-Puzzle
 
 ## Objective

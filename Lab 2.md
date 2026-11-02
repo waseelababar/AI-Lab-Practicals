@@ -55,15 +55,6 @@ directions = [
 ]
 ---
 
-# Understand what happened ?
- #  What did we change?
-
- Previously, your directions were:
- up, down, left, right
-
- Now we changed them to:
-
- **right, down, left, up**
 
 
 ### 2. Output

@@ -60,3 +60,9 @@ directions = [
     (0, 1)     # right
 ]
 ---
+
+### 🖥️ Output
+```text
+DFS path (new order): [(0, 0), (1, 0), (2, 0), (2, 1), (2, 2), (3, 2), (3, 3), (3, 4), (4, 4)]
+DFS path length: 8
+DFS maximum frontier: 3

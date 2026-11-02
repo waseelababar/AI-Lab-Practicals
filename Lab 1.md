@@ -1,3 +1,11 @@
+**Name:** Waseela Babar  
+**Roll Number:** 08
+**Batch:**  2024-2028
+**Department:**  Computer Science
+**Assignmnet:**  AI
+**Submitted to:**  Sir Imran 
+**Date:**  2-Nov_2026
+
 # Lab 1
 
 # Exercise 1

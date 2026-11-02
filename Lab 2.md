@@ -127,7 +127,8 @@ start = (0, 0)
 goal = (4, 4)
 ---
 ```
-Program Output
+### 🖥️ Output
+```text
 
 Trial : 1
 Start: (0, 0)
@@ -162,6 +163,7 @@ DFS path length: 10
 DFS maximum frontier: 3
 Same path: False
 --------------------------------
+```
 # Comparison Table
 
 ### 4. Comparison Table

@@ -66,3 +66,64 @@ directions = [
 DFS path (new order): [(0, 0), (1, 0), (2, 0), (2, 1), (2, 2), (3, 2), (3, 3), (3, 4), (4, 4)]
 DFS path length: 8
 DFS maximum frontier: 3
+```
+### 3. Answers to the Questions
+
+**Q1. Did the DFS path change?**
+
+Yes, the DFS path changed because we changed the order of directions. Previously, DFS explored the upper route, but with the new order, it explored the lower route.
+
+**Q2. Did BFS's path (Section 4) depend on this ordering the same way? Why or why not?**
+
+BFS also uses the neighbor order when exploring positions. Its selected path can change when multiple shortest paths are available. However, BFS always finds a shortest path when every movement has an equal cost. In this experiment, we only ran DFS again, so the original BFS result remained unchanged.
+
+
+# Experiment 2: Change Start and Goal
+**1. Objective
+The objective of this experiment is to test BFS and DFS using different starting and goal positions in the same maze and compare their path lengths and maximum frontier sizes.**
+
+
+---python
+
+directions = [
+    (-1, 0),   # up
+    (1, 0),    # down
+    (0, -1),   # left
+    (0, 1)     # right
+]
+
+# Three different start and goal pairs
+test_pairs = [
+    ((0, 0), (2, 2)),
+    ((0, 0), (2, 4)),
+    ((4, 0), (0, 4))
+]
+
+# Run BFS and DFS for each pair
+for number, (start, goal) in enumerate(test_pairs, start=1):
+
+    print("Trial:", number)
+    print("Start:", start)
+    print("Goal:", goal)
+
+    bfs_path, bfs_frontier = bfs(maze, start, goal)
+
+    dfs_path, dfs_frontier = dfs(maze, start, goal)
+
+    print("BFS path:", bfs_path)
+    print("BFS path length:", len(bfs_path) - 1)
+    print("BFS maximum frontier:", bfs_frontier)
+
+    print("DFS path:", dfs_path)
+    print("DFS path length:", len(dfs_path) - 1)
+    print("DFS maximum frontier:", dfs_frontier)
+
+    print("Same path:", bfs_path == dfs_path)
+
+    print("--------------------------------")
+
+# Reset original start and goal
+start = (0, 0)
+goal = (4, 4)
+---
+```

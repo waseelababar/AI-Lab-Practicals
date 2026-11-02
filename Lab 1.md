@@ -84,4 +84,6 @@ def evaluate_student(student_record, kb):
         "status": "Invalid Score Entry",
         "action": "Verify submitted marks with the exam department."
     }
-    ## Replacing  above lines to KB achieves the 1st exercise.
+    
+    
+    Replacing  above lines to KB achieves the 1st exercise.

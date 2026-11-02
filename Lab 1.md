@@ -6,6 +6,7 @@
 
 # Exercise 1: Degree Honors Rule
 
+```python
 UNIVERSITY_KB["rules"].append({
     "id": "RULE_07",
     "conditions": {
@@ -18,6 +19,7 @@ UNIVERSITY_KB["rules"].append({
 })
 
 print("New Degree Honors Rule Added Successfully!")
+```
 
 Adding above lines to KB achieves the 1st exercise.
 

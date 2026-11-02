@@ -34,7 +34,7 @@ BFS explores the maze level by level, while DFS explores one direction deeply be
 The objective of this experiment is to test how changing the order of directions (neighbors) affects the path found by Depth-First Search (DFS). Because DFS explores deep paths based on the sequence of available directions (up, down, left, right), changing this order will alter the resulting path.
 ### 💻 Code Cell
 
-# ```python
+ ```python
 directions = [
     (0, 1),   # right
     (1, 0),   # down

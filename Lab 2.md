@@ -1,8 +1,10 @@
 # Lab 2
 
+**Topic:** Uninformed Search Algorithms
+
+
 ## Task: Compare BFS and DFS
 
-**Topic:** Uninformed Search Algorithms
 
 ### Comparison Table
 
@@ -27,8 +29,11 @@ BFS explores the maze level by level, while DFS explores one direction deeply be
 
 # Experiment 1 — Change the Neighbor Order.
 
-DFS's exact path depends on the order in which neighbors are tried. Change `directions` and re-run DFS[cite: 6]:
+### 1. Objective
 
+The objective of this experiment is to test how changing the order of directions (neighbors) affects the path found by Depth-First Search (DFS). Because DFS explores deep paths based on the sequence of available directions (up, down, left, right), changing this order will alter the resulting path.
+
+### 💻 Input (Code Cell)
 ```python
 directions = [
     (0, 1),   # right
@@ -46,6 +51,7 @@ print("DFS maximum frontier:", dfs_frontier2)
 print()
 print_maze(maze, dfs_path2)
 
+
 # Reset directions to the original order
 directions = [
     (-1, 0),   # up
@@ -59,12 +65,10 @@ directions = [
 
 ### 2. Output
 
-**DFS Path (New Order):** 
-[(0,0), (1,0), (2,0), (2,1), (2,2), (3,2), (3,3), (3,4), (4,4)]
+DFS path (new order): [(0, 0), (1, 0), (2, 0), (2, 1), (2, 2), (3, 2), (3, 3), (3, 4), (4, 4)]
+DFS path length: 8
+DFS maximum frontier: 3
 
-**DFS Path Length:** 8
-
-**DFS Maximum Frontier:** 3
 
 ### 3. Answers to the Questions
 
@@ -79,6 +83,9 @@ BFS also uses the neighbor order when exploring positions. Its selected path can
 
 
 # Experiment 2: Change Start and Goal
+**1. Objective
+The objective of this experiment is to test BFS and DFS using different starting and goal positions in the same maze and compare their path lengths and maximum frontier sizes.**
+
 
 ---python
 
@@ -123,9 +130,10 @@ for number, (start, goal) in enumerate(test_pairs, start=1):
 start = (0, 0)
 goal = (4, 4)
 ---
+
 **Program Output**
 
-**Trial** : 1
+Trial : 1
 Start: (0, 0)
 Goal: (2, 2)
 BFS path: [(0, 0), (1, 0), (2, 0), (2, 1), (2, 2)]
@@ -136,7 +144,7 @@ DFS path length: 10
 DFS maximum frontier: 3
 Same path: False
 --------------------------------
-**Trial**: 2
+Trial: 2
 Start: (0, 0)
 Goal: (2, 4)
 BFS path: [(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (1, 4), (2, 4)]
@@ -147,7 +155,7 @@ DFS path length: 6
 DFS maximum frontier: 2
 Same path: True
 --------------------------------
-**Trial**: 3
+Trial: 3
 Start: (4, 0)
 Goal: (0, 4)
 BFS path: [(4, 0), (3, 0), (2, 0), (1, 0), (0, 0), (0, 1), (0, 2), (0, 3), (0, 4)]

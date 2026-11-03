@@ -52,8 +52,63 @@ Probabilistic completeness means that if a solution exists, the probability that
 Because basic Hill-Climbing is highly dependent on the random starting point. By resetting the algorithm with a new random starting state when it gets stuck, it explores entirely different areas of the search space, giving it multiple independent trials to find a basin of attraction that leads to the global maximum.
 
 **Q10: Does probabilistic completeness guarantee that a solution will be found within 100 restarts? Why or why not?**
+ 
+ Answer: No, it does not guarantee a solution within any finite boundary like 100 restarts Probabilistic completeness is an asymptotic guarantee (as restarts k -> infinity). For any finite k, there is always a non-zero probability that all k independent runs will end in local maxima.
 
-No, it does not guarantee a solution within any finite boundary like 100 restarts. Probabilistic completeness is an asymptotic guarantee (as restarts  k→∞ ). For any finite  k , there is always a non-zero probability that all  k  independent runs will end in local maxima.
+## 18. Extension Task
 
+Modify the experiment to solve the N-Queens problem for N = 20[cite: 18].
+
+Record the following[cite: 18]:
+
+* Number of conflicts in the final state.
+* Number of iterations in a basic Hill-Climbing run.
+* Number of restarts required by Random-Restart Hill-Climbing.
+* Whether a valid solution was found.
 
 ---
+
+ **1. Basic Hill-Climbing for N = 20**
+ ### Code Cell
+
+```python
+state_basic, scores_basic = hill_climbing(20)
+conflicts_basic = count_conflicts(state_basic)
+print("--- Basic Hill-Climbing ---")
+print(f"Final state: {state_basic}")
+print(f"Number of conflicts in the final state: {conflicts_basic}")
+print(f"Number of iterations: {len(scores_basic)}")
+print(f"Valid solution found: {conflicts_basic == 0}\n")
+```
+ **2. Random-Restart Hill-Climbing for N = 20**
+  ### Code Cell
+```python
+
+state_restart, restarts_needed, best_scores_restart = random_restart_hill_climbing(20, max_restarts=500)
+conflicts_restart = count_conflicts(state_restart)
+print("--- Random-Restart Hill-Climbing ---")
+print(f"Final state: {state_restart}")
+print(f"Number of conflicts in the final state: {conflicts_restart}")
+print(f"Number of restarts required: {restarts_needed}")
+print(f"Valid solution found: {conflicts_restart == 0}")
+```
+### 📝 Markdown Cell
+**output**
+
+```python
+
+N = 20 Extension Experiment ===
+
+--- Basic Hill-Climbing ---
+Final state: [1, 8, 15, 2, 18, 16, 4, 9, 12, 5, 3, 17, 0, 10, 19, 9, 11, 13, 7, 19]
+Number of conflicts in the final state: 3
+Number of iterations: 9
+Valid solution found: False
+
+--- Random-Restart Hill-Climbing ---
+Final state: [9, 4, 15, 7, 10, 16, 13, 5, 0, 17, 3, 11, 6, 12, 19, 1, 18, 14, 2, 8]
+Number of conflicts in the final state: 0
+Number of restarts required: 67
+Valid solution found: True
+
+```
